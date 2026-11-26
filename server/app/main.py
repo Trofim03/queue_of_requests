@@ -1,11 +1,9 @@
 import uuid
-
-from prometheus_fastapi_instrumentator import Instrumentator
-
 from contextlib import asynccontextmanager
 
 from fastapi import Depends, FastAPI, HTTPException, Query, Request
 from fastapi.responses import JSONResponse
+from prometheus_fastapi_instrumentator import Instrumentator
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 

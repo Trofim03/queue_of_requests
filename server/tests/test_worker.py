@@ -1,7 +1,9 @@
 import pytest
-from app.worker import process_ticket
-from app.db import SessionLocal, Ticket, TicketStatus
+
 from app.config import settings
+from app.db import SessionLocal, Ticket, TicketStatus
+from app.worker import process_ticket
+
 
 @pytest.mark.asyncio
 async def test_worker_error():

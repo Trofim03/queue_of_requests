@@ -1,0 +1,10 @@
+line-length = 120
+target-version = "py312"
+
+[lint]
+# Игнорируем правила, которые конфликтуют со спецификой FastAPI и ARQ
+ignore = [
+    "B008",   # FastAPI: Depends/Query в аргументах — это стандарт
+    "TRY401", # logging.exception уже включает traceback, exc не нужен
+    "RUF012", # ARQ требует обычный список в WorkerSettings
+]

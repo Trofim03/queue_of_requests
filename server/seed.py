@@ -1,10 +1,12 @@
 import asyncio
+
 from app.db import SessionLocal, Ticket, TicketStatus
+
 
 async def seed():
     async with SessionLocal() as session:
         # Проверяем, есть ли уже записи
-        from sqlalchemy import select, func
+        from sqlalchemy import func, select
         count = await session.scalar(select(func.count()).select_from(Ticket))
         if count > 0:
             print("База уже содержит данные, пропускаем seed.")

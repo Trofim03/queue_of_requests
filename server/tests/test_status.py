@@ -1,6 +1,8 @@
 import pytest
-from app.service import transition, InvalidTransition
+
 from app.db import Ticket, TicketStatus
+from app.service import InvalidTransition, transition
+
 
 def test_invalid_transition():
     ticket = Ticket(title="T", description="D", status=TicketStatus.done)
