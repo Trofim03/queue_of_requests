@@ -1,0 +1,20 @@
+# runtime
+fastapi
+uvicorn[standard]
+sqlalchemy[asyncio]
+asyncpg
+alembic
+pydantic-settings
+arq
+redis
+prometheus-fastapi-instrumentator
+
+# dev
+pytest
+pytest-asyncio
+httpx
+ruff
+pytest
+pytest-asyncio
+httpx
+aiosqlite
